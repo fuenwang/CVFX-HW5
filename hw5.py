@@ -61,16 +61,19 @@ def getHomography(lst):
         #exit()
         new_img = cv2.warpPerspective(lst[i], H, (w, h))
         #tmp = tmp + new_img.astype(np.float32)
+        ggwp = np.concatenate([lst[i], new_img], axis=1)
+        cv2.imwrite('ggwp.png', ggwp[:, :, ::-1])
+        exit()
         '''
         plt.subplot('121')
-        plt.imshow(center_img)
+        plt.imshow(lst[i])
         plt.subplot('122')
         plt.imshow(new_img)
         plt.show()
         '''
         aaa.append(new_img)
     return aaa
-lst = ['./src/%s' %x for x in sorted(os.listdir('./src')) if x.endswith('.jpg') and x.startswith('tt')]
+lst = ['./src/%s' %x for x in sorted(os.listdir('./src')) if x.endswith('.jpg') and x.startswith('gg')][:]
 img_lst = [cv2.imread(x, cv2.IMREAD_COLOR) for x in lst]
 img_lst = [x[:,:,::-1] for x in img_lst][:]
 print(lst)
