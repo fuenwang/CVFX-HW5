@@ -52,3 +52,9 @@ Also, we compare the reulsts of using different number of images. The ablation s
 We can see that the more images we use, the more obvious sourrending effect we can see.
 
 ## 4.Exploit creativity to add some image processing to enhance effect (PhotoShop)
+
+We add some image processing to enhance effect. For example, horizontal flip, monochrome color, Lomo and Polaroid filters on the results.
+
+|Example 1|Example 2|
+|---|---|
+|<img src='filter/result_1_.gif' width="300">|<img src='filter/result_2_.gif' width="300">|
