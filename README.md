@@ -35,6 +35,8 @@ We do some examples in motion parallex. Here show the results.
 |**Example 1**|<img src='ttt.gif'>|
 |**Example 2**|<img src='ggg.gif'>|
 |**Example 3**|<img src='aaa.gif'>|
+|**Example 4**|<img src='result_1.gif'>|
+|**Example 5**|<img src='result_2.gif'>|
 
 As you can see, Example 2 seems perform not good. The reason we think is that Example 2 contain fewer feature.
 Also, we compare the reulsts of using different number of images. The ablation study will show below.
