@@ -28,10 +28,33 @@ Here show the alignment results of Example 1
 |Image5|<img src='matching_fig/matching5.jpg'>|
 
 ## 3.Generate the multi-view 3D visual effects
-Totally, we do three cases in motion parallex. Here show the results.
+We do some examples in motion parallex. Here show the results.
 
 |             |**GIF Result**|
 |:-----------:|--------------|
 |**Example 1**|<img src='ttt.gif'>|
 |**Example 2**|<img src='ggg.gif'>|
 |**Example 3**|<img src='aaa.gif'>|
+|**Example 4**|<img src='result_1.gif'>|
+|**Example 5**|<img src='result_2.gif'>|
+
+As you can see, Example 2 seems perform not good. The reason we think is that Example 2 contain fewer feature.
+Also, we compare the reulsts of using different number of images. The ablation study will show below.
+
+|Five Images|Four Images|
+|--------------------|----------------------|
+|<img src='ttt.gif'>|<img src='ttt1.gif'>|
+
+|Three Images|Two Images|
+|--------------------|----------------------|
+|<img src='ttt2.gif'>|<img src='ttt3.gif'>|
+
+We can see that the more images we use, the more obvious sourrending effect we can see.
+
+## 4.Exploit creativity to add some image processing to enhance effect (PhotoShop)
+
+We add some image processing to enhance effect. For example, horizontal flip, monochrome color, Lomo and Polaroid filters on the results.
+
+|Example 1|Example 2|Example 3|
+|---|---|---|
+|<img src='filter/result_1_.gif' width="300">|<img src='filter/result_2_.gif' width="300">|<img src='filter/ttt_.gif' width="300">|
