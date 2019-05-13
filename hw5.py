@@ -24,8 +24,8 @@ def getHomography(lst):
     homo_lst = [np.eye(3).astype(np.float32)]
     [h, w, c] = lst[0].shape
     
-    #center_idx = len(lst) // 2
-    center_idx = 1
+    center_idx = len(lst) // 2
+    #center_idx = 1
     center_img = lst[center_idx]
     valid_indice = []
     r_x = (230, 400)
@@ -38,13 +38,18 @@ def getHomography(lst):
     tmp = np.zeros_like(center_img).astype(np.float32).copy() 
     for i in range(len(lst)):
         matches = bf.match(des_lst[i], des_lst[center_idx])
-        matches = [x for x in matches if x.trainIdx in valid_indice]
+        #matches = [x for x in matches if x.trainIdx in valid_indice]
         kp1 = [kp_lst[i][x.queryIdx] for x in matches]
         kp2 = [kp_lst[center_idx][x.trainIdx] for x in matches]
+        kp1_cc = kp_lst[i]
+        kp2_cc = kp_lst[center_idx]
         kp1 = np.array([x.pt for x in kp1], np.float32)
         kp2 = np.array([x.pt for x in kp2], np.float32)
-
-
+        img3 = cv2.drawMatches(lst[i], kp1_cc, lst[center_idx],kp2_cc, matches[:50], None, flags=2)
+        cv2.imwrite('matching%d.jpg'%(i+1), img3)
+        #plt.imshow(img3)
+        #plt.show()
+        
         H = cv2.findHomography(kp1, kp2, method=cv2.RANSAC)[0].astype(np.float32)
         #H = cv2.getPerspectiveTransform(kp1, kp2).astype(np.float32)
         #kp1 = np.concatenate([kp1, np.ones([kp1.shape[0], 1])], axis=1)
@@ -72,7 +77,7 @@ print(lst)
 h, w, c = img_lst[0].shape
 aaa = getHomography(img_lst[:])
 aaa = [x[100:-100, 100:-100, :] for x in aaa]
-imageio.mimsave('ttt.gif', aaa)
+#imageio.mimsave('ttt.gif', aaa)
 '''
 video=cv2.VideoWriter('video.mp4', cv2.VideoWriter_fourcc('P','I','M','1'), frameSize=(w, h), fps=8)
 for one in aaa:
