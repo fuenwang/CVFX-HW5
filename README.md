@@ -27,6 +27,9 @@ Here show the alignment results of Example 1
 |Image4|<img src='matching_fig/matching4.jpg'>|
 |Image5|<img src='matching_fig/matching5.jpg'>|
 
+## Align result
+<img src='ggwp.png'>
+
 ## 3.Generate the multi-view 3D visual effects
 We do some examples in motion parallex. Here show the results.
 
