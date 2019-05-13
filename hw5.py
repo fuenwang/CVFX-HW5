@@ -33,8 +33,8 @@ def getHomography(lst):
     aaa = []
     for i, x in enumerate(kp_lst[center_idx]):
         if True:
-        #if x.pt[0] >= r_x[0] and x.pt[0] <= r_x[1] and x.pt[1] >= r_y[0] and x.pt[1] <= r_y[1]:
-            valid_indice.append(i)
+            if x.pt[0] >= r_x[0] and x.pt[0] <= r_x[1] and x.pt[1] >= r_y[0] and x.pt[1] <= r_y[1]:
+                valid_indice.append(i)
     tmp = np.zeros_like(center_img).astype(np.float32).copy() 
     for i in range(len(lst)):
         matches = bf.match(des_lst[i], des_lst[center_idx])
@@ -65,13 +65,14 @@ def getHomography(lst):
         '''
         aaa.append(new_img)
     return aaa
-lst = ['./src/%s' %x for x in sorted(os.listdir('./src')) if x.endswith('.JPG')]
+lst = ['./src/%s' %x for x in sorted(os.listdir('./src')) if x.endswith('.jpg') and x.startswith('tt')]
 img_lst = [cv2.imread(x, cv2.IMREAD_COLOR) for x in lst]
 img_lst = [x[:,:,::-1] for x in img_lst][:]
+print(lst)
 h, w, c = img_lst[0].shape
 aaa = getHomography(img_lst[:])
 aaa = [x[100:-100, 100:-100, :] for x in aaa]
-imageio.mimsave('aaa.gif', aaa)
+imageio.mimsave('ttt.gif', aaa)
 '''
 video=cv2.VideoWriter('video.mp4', cv2.VideoWriter_fourcc('P','I','M','1'), frameSize=(w, h), fps=8)
 for one in aaa:
