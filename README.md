@@ -55,6 +55,6 @@ We can see that the more images we use, the more obvious sourrending effect we c
 
 We add some image processing to enhance effect. For example, horizontal flip, monochrome color, Lomo and Polaroid filters on the results.
 
-|Example 1|Example 2|
-|---|---|
-|<img src='filter/result_1_.gif' width="300">|<img src='filter/result_2_.gif' width="300">|
+|Example 1|Example 2|Example 3|
+|---|---|---|
+|<img src='filter/result_1_.gif' width="300">|<img src='filter/result_2_.gif' width="300">|<img src='filter/ttt_.gif' width="300">|
