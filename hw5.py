@@ -46,7 +46,7 @@ def getHomography(lst):
         kp1 = np.array([x.pt for x in kp1], np.float32)
         kp2 = np.array([x.pt for x in kp2], np.float32)
         img3 = cv2.drawMatches(lst[i], kp1_cc, lst[center_idx],kp2_cc, matches[:50], None, flags=2)
-        cv2.imwrite('matching%d.jpg'%(i+1), img3)
+        cv2.imwrite('./matching_fig/matching%d.jpg'%(i+1), img3[:, :, ::-1])
         #plt.imshow(img3)
         #plt.show()
         
