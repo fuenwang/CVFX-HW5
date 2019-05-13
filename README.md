@@ -11,13 +11,13 @@
 In our homework, we use the center image of captured order as basline. In term of, the other images all need to align with the image whose captured order was middle. <br>
 Here show the alignment results of Example 1 
 
-|All align with Image3<br>(center image)|**Example 1**|
+|    |**Example 1**|
 |:-------------------:|-------------|
-|Image1|<img src='matching_fig/matching1.jpg'>|
-|Image2|<img src='matching_fig/matching2.jpg'>|
-|Image3|<img src='matching_fig/matching3.jpg'>|
-|Image4|<img src='matching_fig/matching4.jpg'>|
-|Image5|<img src='matching_fig/matching5.jpg'>|
+|Sample1|<img src='matching_fig/matching1.jpg'>|
+|Sample2|<img src='matching_fig/matching2.jpg'>|
+|Sample3|<img src='matching_fig/matching3.jpg'>|
+|Sample4|<img src='matching_fig/matching4.jpg'>|
+|Sample5|<img src='matching_fig/matching5.jpg'>|
 
 ## Align result
 <img src='ggwp.png'>
