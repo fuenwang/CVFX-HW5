@@ -28,10 +28,25 @@ Here show the alignment results of Example 1
 |Image5|<img src='matching_fig/matching5.jpg'>|
 
 ## 3.Generate the multi-view 3D visual effects
-Totally, we do three cases in motion parallex. Here show the results.
+We do some examples in motion parallex. Here show the results.
 
 |             |**GIF Result**|
 |:-----------:|--------------|
 |**Example 1**|<img src='ttt.gif'>|
 |**Example 2**|<img src='ggg.gif'>|
 |**Example 3**|<img src='aaa.gif'>|
+
+As you can see, Example 2 seems perform not good. The reason we think is that Example 2 contain fewer feature.
+Also, we compare the reulsts of using different number of images. The ablation study will show below.
+
+|Five Images|Four Images|
+|--------------------|----------------------|
+|<img src='ttt.gif'>|<img src='ttt1.gif'>|
+
+|Three Images|Two Images|
+|--------------------|----------------------|
+|<img src='ttt2.gif'>|<img src='ttt3.gif'>|
+
+We can see that more images we use, we can see sourrending effect more obviously.
+
+## 4.Exploit creativity to add some image processing to enhance effect (PhotoShop)
