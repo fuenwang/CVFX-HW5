@@ -49,6 +49,6 @@ Also, we compare the reulsts of using different number of images. The ablation s
 |--------------------|----------------------|
 |<img src='ttt2.gif'>|<img src='ttt3.gif'>|
 
-We can see that more images we use, we can see sourrending effect more obviously.
+We can see that the more images we use, the more obvious sourrending effect we can see.
 
 ## 4.Exploit creativity to add some image processing to enhance effect (PhotoShop)
